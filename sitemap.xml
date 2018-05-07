@@ -50,6 +50,12 @@
   </url>
   
   <url>
+    <loc>https://im-Luxqi.github.io/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://im-Luxqi.github.io/tags/example/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -82,12 +88,6 @@
   <url>
     <loc>https://im-Luxqi.github.io/tags/</loc>
     <lastmod>2017-03-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://im-Luxqi.github.io/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
