@@ -344,7 +344,7 @@
 </div>
 
         
-
+<div id="container"></div>
         
       </article>
 
@@ -437,6 +437,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
 <script src="https://im-Luxqi.github.io/js/load-photoswipe.js"></script>
 
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  //id: '页面 ID', // 可选。默认为 location.href
+  owner: 'im-Luxqi',
+  repo: 'approachHill_eleven',
+  oauth: {
+    client_id: 'ef956f416c29fa565b89',
+    client_secret: '00fa6440dc03d57619b74d2a6a54b9335d85cb05',
+  },
+})
+gitment.render('container')
+</script>
 
 
 
