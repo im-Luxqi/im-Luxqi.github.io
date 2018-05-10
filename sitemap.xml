@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://im-Luxqi.github.io/post/temp/</loc>
+    <lastmod>2018-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://im-Luxqi.github.io/post/2018-05-07-using/</loc>
     <lastmod>2018-05-08T00:00:00+00:00</lastmod>
   </url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>https://im-Luxqi.github.io/</loc>
-    <lastmod>2018-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -31,12 +36,18 @@
   
   <url>
     <loc>https://im-Luxqi.github.io/post/</loc>
-    <lastmod>2018-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://im-Luxqi.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://im-Luxqi.github.io/tags/%E5%9F%BA%E7%A1%80%E6%9D%82%E8%AE%B0/</loc>
+    <lastmod>2018-05-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
