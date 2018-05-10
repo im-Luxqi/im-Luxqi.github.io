@@ -5,23 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>星齐</title>
-  <meta property="og:title" content="星齐" />
-  <meta name="twitter:title" content="星齐" />
-  <meta name="description" content="一个自娱自乐的博客">
-  <meta property="og:description" content="一个自娱自乐的博客">
-  <meta name="twitter:description" content="一个自娱自乐的博客">
+  <title>BAT 批处理脚本</title>
+  <meta property="og:title" content="BAT 批处理脚本" />
+  <meta name="twitter:title" content="BAT 批处理脚本" />
+  <meta name="description" content="很多时候脚本是不可少的，为了看懂脚本，写一些简单脚本，需要了解一些批处理文件的基本命令。
+
+">
+  <meta property="og:description" content="很多时候脚本是不可少的，为了看懂脚本，写一些简单脚本，需要了解一些批处理文件的基本命令。
+
+">
+  <meta name="twitter:description" content="很多时候脚本是不可少的，为了看懂脚本，写一些简单脚本，需要了解一些批处理文件的基本命令。
+
+">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://im-Luxqi.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://im-Luxqi.github.io/page/about/" />
+  <meta property="og:url" content="https://im-Luxqi.github.io/post/2018-05-10-bat/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
   <meta name="generator" content="Hugo 0.40.2" />
-  <link rel="canonical" href="https://im-Luxqi.github.io/page/about/" />
+  <link rel="canonical" href="https://im-Luxqi.github.io/post/2018-05-10-bat/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -155,45 +161,31 @@
 
 
   
-    <div id="header-big-imgs" data-num-img=3 data-img-src-1="https://im-Luxqi.github.io/img/triangle.jpg" data-img-desc-1="Triangle"data-img-src-2="https://im-Luxqi.github.io/img/sphere.jpg" data-img-desc-2="Sphere"data-img-src-3="https://im-Luxqi.github.io/img/hexagon.jpg" data-img-desc-3="Hexagon"></div>
-  
 
-  <header class="header-section has-img">
-    
-      <div class="intro-header big-img">
-        
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="page-heading">
-                <h1>星齐</h1>
-                  
-                    
-                      <hr class="small">
-                      <span class="page-subheading">一个自娱自乐的博客</span>
-                    
-                  
-                  
-              </div>
-            </div>
-          </div>
-        </div>
-        <span class="img-desc" style="display: inline;"></span>
-      </div>
+  <header class="header-section ">
     
     <div class="intro-header no-img">
       
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>星齐</h1>
+            <div class="post-heading">
+              <h1>BAT 批处理脚本</h1>
                 
-                  
-                    <hr class="small">
-                    <span class="page-subheading">一个自娱自乐的博客</span>
-                  
                 
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;发表于 2018-05-10
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 1 分钟 (53 个字)
+  
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -208,18 +200,108 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
+        <p>很多时候脚本是不可少的，为了看懂脚本，写一些简单脚本，需要了解一些批处理文件的基本命令。</p>
+
+<p></p>
+
+<h3 id="一-批处理定义">一、批处理定义</h3>
+
+<p>将一系列命令集合成一个可执行文本文件；拓展名为bat 或 cmd。</p>
+
+<h3 id="二-基本命令">二、基本命令</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">rem</td>
+<td align="left">该命令用于注释,rem起始的行不会作为代码执行。</td>
+</tr>
+
+<tr>
+<td align="left">pause</td>
+<td align="left">该命令用于暂停正在执行的批处理文件，并且提示用户按键，然后程序继续执行。</td>
+</tr>
+
+<tr>
+<td align="left">echo</td>
+<td align="left">该命令用于在dos控制台显示一段文本，相当于print,如果想要显示环境变量需要在环境变量前后加上%,例如显示操作系统 echo %OS%。</td>
+</tr>
+
+<tr>
+<td align="left">echo off</td>
+<td align="left">该命令可以防止将批处理文件中的具体命令打印出来，而只会输出执行结果。</td>
+</tr>
+
+<tr>
+<td align="left">@echo off</td>
+<td align="left">该命令与echo off相同，唯一的区别在于 @echo off不仅会隐藏具体命令还会连&rsquo;echo off&rsquo;这个自身命令也隐藏起来。</td>
+</tr>
+
+<tr>
+<td align="left">set</td>
+<td align="left">设置环境变量，例如 set A = 100 设置A变量为100。</td>
+</tr>
+
+<tr>
+<td align="left">label</td>
+<td align="left">使用 &lsquo;:&lsquo;(冒号)来设置一个标签，供给goto命令使用，例如&rdquo;：init&rdquo;代表一个init标签。</td>
+</tr>
+
+<tr>
+<td align="left">goto</td>
+<td align="left">该命令使正在执行的命令强制跳转到他指定的标签。例如我需要跳转指定A标签下的命令，如下：goto A</td>
+</tr>
+
+<tr>
+<td align="left">not</td>
+<td align="left">该命令用来取反，相当于逻辑非。</td>
+</tr>
+
+<tr>
+<td align="left">if</td>
+<td align="left">该命令表示判断</td>
+</tr>
+
+<tr>
+<td align="left">exist</td>
+<td align="left">该命令通常用来测试文件是否存在，一般和if一起使用</td>
+</tr>
+
+<tr>
+<td align="left">shift</td>
+<td align="left">该命令用来将参数后移一位即将%2%赋值给%1%，%3%赋值给%2%，也可以理解为参数列表左移即删除现有参数列表的第一位。</td>
+</tr>
+
+<tr>
+<td align="left">call</td>
+<td align="left">该命令用来调用另外一条命令。</td>
+</tr>
+
+<tr>
+<td align="left">setLocal</td>
+<td align="left">该命令表示该批处理文件中修改的环境变量只在本文件中起作用，或者直到endLocal命令出现，被修改的环境变量才恢复原状。</td>
+</tr>
+
+<tr>
+<td align="left">start</td>
+<td align="left">重新开启一个dos窗口。</td>
+</tr>
+</tbody>
+</table>
+
         
-
-<p>，</p>
-
-<h3 id="my-history">my history</h3>
-
-<ul>
-<li>不详</li>
-<li>2017.7.10 入职 常州瑞克斯信息科技有限公司</li>
-</ul>
-
-
+          <div class="blog-tags">
+            
+              <a href="https://im-Luxqi.github.io/tags/%E5%9F%BA%E7%A1%80%E6%9D%82%E8%AE%B0/">基础杂记</a>&nbsp;
+            
+          </div>
         
 
         
@@ -227,6 +309,15 @@
 		<div id="container"></div>
       </article>
 
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://im-Luxqi.github.io/post/2018-05-07-using-day-by-day/" data-toggle="tooltip" data-placement="top" title="日常维护">&larr; 前一篇</a>
+            </li>
+          
+          
+        </ul>
       
 
 

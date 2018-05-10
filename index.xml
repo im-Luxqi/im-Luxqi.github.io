@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>im_Luxqi@163.com (XingQi.wang)</managingEditor>
     <webMaster>im_Luxqi@163.com (XingQi.wang)</webMaster>
-    <lastBuildDate>Tue, 08 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://im-Luxqi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BAT 批处理脚本</title>
+      <link>https://im-Luxqi.github.io/post/2018-05-10-bat/</link>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/2018-05-10-bat/</guid>
+      <description>&lt;p&gt;很多时候脚本是不可少的，为了看懂脚本，写一些简单脚本，需要了解一些批处理文件的基本命令。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学习规划</title>
+      <link>https://im-Luxqi.github.io/study-planning/study-planning/</link>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/study-planning/study-planning/</guid>
+      <description> 一、阅读源码 学习经典源码中所用到的经典设计思想及常用设计模式。  tomcat源码参考
+二、分布式架构  三、微服务架构  四、并发编程  五、性能优化  六、开发工具  </description>
+    </item>
     
     <item>
       <title>日常维护</title>
