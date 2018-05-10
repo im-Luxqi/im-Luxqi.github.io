@@ -428,7 +428,7 @@ footer .theme-by {
 }
 
 .blog-tags:before {
-  content: "Tags: ";
+  content: "标签: ";
 }
 
 .blog-tags a {
