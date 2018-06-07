@@ -5,21 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Tags</title>
-  <meta property="og:title" content="Tags" />
-  <meta name="twitter:title" content="Tags" />
+  <title>正则表达式</title>
+  <meta property="og:title" content="正则表达式" />
+  <meta name="twitter:title" content="正则表达式" />
+  <meta name="description" content="积累一下使用过的,常用的正则表达式，方便以后的使用
+
+">
+  <meta property="og:description" content="积累一下使用过的,常用的正则表达式，方便以后的使用
+
+">
+  <meta name="twitter:description" content="积累一下使用过的,常用的正则表达式，方便以后的使用
+
+">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://im-Luxqi.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://im-Luxqi.github.io/tags/" />
+  <meta property="og:url" content="https://im-Luxqi.github.io/post/2018-06-07-common-regularexpression/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
   <meta name="generator" content="Hugo 0.40.2" />
-  <link rel="canonical" href="https://im-Luxqi.github.io/tags/" />
-  <link rel="alternate" href="https://im-Luxqi.github.io/tags/index.xml" type="application/rss+xml" title="Day day up">
+  <link rel="canonical" href="https://im-Luxqi.github.io/post/2018-06-07-common-regularexpression/" />
+  <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -160,9 +169,23 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="tags-heading">
-              <h1>Tags</h1>
+            <div class="post-heading">
+              <h1>正则表达式</h1>
                 
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;发表于 2018-06-07
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 1 分钟 (33 个字)
+  
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -173,45 +196,92 @@
 
 
     
-
-
-
 <div class="container" role="main">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-    <article class="post-preview">
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>积累一下使用过的,常用的正则表达式，方便以后的使用</p>
+
+<p></p>
+
+<h4 id="1-只能输入数字-小数点后只能保留两位">1.只能输入数字，小数点后只能保留两位</h4>
+
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span> <span class="nx">onkeyup</span><span class="o">=</span><span class="s2">&#34;clearNoNum(this)&#34;</span><span class="o">&gt;</span>
+
+<span class="kd">function</span> <span class="nx">clearNoNum</span><span class="p">(</span><span class="nx">obj</span><span class="p">){</span> 
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[^\d.]/g</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">);</span>  <span class="c1">//清除“数字”和“.”以外的字符  
+</span><span class="c1"></span>    <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\.{2,}/g</span><span class="p">,</span><span class="s2">&#34;.&#34;</span><span class="p">);</span> <span class="c1">//只保留第一个. 清除多余的  
+</span><span class="c1"></span>    <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">,</span><span class="s2">&#34;$#$&#34;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\./g</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&#34;$#$&#34;</span><span class="p">,</span><span class="s2">&#34;.&#34;</span><span class="p">);</span> 
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^(\-)*(\d+)\.(\d\d).*$/</span><span class="p">,</span><span class="s1">&#39;$1$2.$3&#39;</span><span class="p">);</span><span class="c1">//只能输入两个小数
+</span><span class="c1">//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额	
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">)</span><span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span> <span class="o">!=</span><span class="s2">&#34;&#34;</span><span class="p">){</span> 
+        <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span> 
+    <span class="p">}</span> 
+<span class="p">}</span> 
+</code></pre></div>
+
         
-          <div class="panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapse基础杂记" data-parent="#accordion"
-               href="#" aria-expanded="false" aria-controls="collapse基础杂记">
-                <div class="panel-heading" role="tab" id="header基础杂记">
-                  <h4 class="panel-title">
-                      基础杂记
-                    <span class="badge">3</span>
-                  </h4>
-                </div>
-            </a>
-            <div id="collapse基础杂记" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading基础杂记">
-              <div class="panel-body">
-                <a href="https://im-Luxqi.github.iotags/%E5%9F%BA%E7%A1%80%E6%9D%82%E8%AE%B0/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  
-                    <a href="https://im-Luxqi.github.io/post/2018-06-07-common-regularexpression/" class="list-group-item">正则表达式</a>
-                  
-                    <a href="https://im-Luxqi.github.io/post/2018-05-10-bat/" class="list-group-item">BAT 批处理脚本</a>
-                  
-                    <a href="https://im-Luxqi.github.io/post/2018-05-07-using-day-by-day/" class="list-group-item">日常维护</a>
-                  
-                </div>
-              </div>
-            </div>
+          <div class="blog-tags">
+            
+              <a href="https://im-Luxqi.github.io/tags/%E5%9F%BA%E7%A1%80%E6%9D%82%E8%AE%B0/">基础杂记</a>&nbsp;
+            
           </div>
         
-      </div>
-    </article>
+
+        
+		
+		<div id="container"></div>
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://im-Luxqi.github.io/post/2018-05-10-bat/" data-toggle="tooltip" data-placement="top" title="BAT 批处理脚本">&larr; 前一篇</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
   </div>
 </div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    
+    return container
+  },
+}
+
+
+
+var gitment = new Gitment({
+  
+  owner: 'im-Luxqi',
+  repo: 'approachHill_eleven',
+  theme: myTheme,
+  oauth: {
+    client_id: 'ef956f416c29fa565b89',
+    client_secret: '00fa6440dc03d57619b74d2a6a54b9335d85cb05',
+  },
+})
+gitment.render('container')
+</script>
+
 
 
 
@@ -242,7 +312,7 @@
           
           <li>
             
-            <a href="https://im-Luxqi.github.io/tags/index.xml" title="RSS">
+            <a href="https://im-Luxqi.github.io/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
