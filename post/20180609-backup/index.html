@@ -185,7 +185,7 @@ https://im-Luxqi.github.io/js/common.js
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 2 分钟 (376 个字)
+  <i class="fa fa-clock-o"></i> 2 分钟 (375 个字)
   
   
 </span>
@@ -217,28 +217,35 @@ https://im-Luxqi.github.io/js/common.js
 <h4 id="一-配置文件">一、配置文件</h4>
 
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span> <span class="nx">db</span> <span class="nx">backup</span>
-<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">username</span><span class="o">=</span><span class="nx">root</span>
+    <span class="err">#</span> <span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">username</span><span class="o">:</span> <span class="nx">进入数据库所需要的用户名</span>
+    <span class="err">#</span> <span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">password</span><span class="o">:</span> <span class="nx">进入数据库所需要的口令</span>
+    <span class="err">#</span> <span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">dir</span><span class="o">:</span> <span class="nx">备份文件所放的目录</span>
+    <span class="err">#</span> <span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">dbname</span><span class="err">：</span> <span class="nx">数据库名称</span>
+    <span class="err">#</span> <span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">keep</span><span class="o">:</span> <span class="nx">配置数据库备份文件保留个数</span>
+    <span class="err">#</span> <span class="nx">pg96</span><span class="p">.</span><span class="nx">cmd</span><span class="err">：</span>
+        <span class="err">#</span> <span class="o">-</span><span class="nx">E</span><span class="p">,</span> <span class="o">--</span><span class="nx">encoding</span>   <span class="nx">转储以ENCODING形式编码的数据</span>
+        <span class="err">#</span> <span class="o">-</span><span class="nx">h</span><span class="p">,</span> <span class="o">--</span><span class="nx">host</span>       <span class="nx">数据库服务器的主机名</span>
+        <span class="err">#</span> <span class="o">-</span><span class="nx">p</span><span class="p">,</span> <span class="o">--</span><span class="nx">port</span>       <span class="nx">数据库服务器的端口号</span>
+        <span class="err">#</span> <span class="o">-</span><span class="nx">U</span><span class="p">,</span> <span class="o">--</span><span class="nx">username</span>   <span class="nx">以指定的数据库用户联接</span>
+        <span class="err">#</span> <span class="o">-</span><span class="nx">d</span><span class="p">,</span> <span class="o">--</span><span class="nx">dbname</span>     <span class="nx">对数据库dbname备份</span>
+        <span class="err">#</span> <span class="o">-</span><span class="nx">f</span><span class="p">,</span> <span class="o">--</span><span class="nx">file</span>       <span class="nx">输出文件的目录名</span>
+<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">username</span><span class="o">=</span><span class="nx">postgres</span>
 <span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">password</span><span class="o">=</span><span class="nx">root</span>
-<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">dir</span><span class="o">=</span><span class="nx">Z</span><span class="o">:</span><span class="err">/backup/mysql</span>
-<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">dbname</span><span class="o">=</span><span class="mi">3</span><span class="nx">f</span><span class="o">-</span><span class="nx">uat</span>
-<span class="err">#</span><span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">keep</span><span class="o">=</span><span class="mi">6</span>
-<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">database</span><span class="o">=</span><span class="nx">mysql</span>
-<span class="nx">pg96</span><span class="p">.</span><span class="nx">dir</span><span class="o">=</span><span class="nx">D</span><span class="o">:</span><span class="err">/PostgreSQL/10/bin/pg_dump</span>
-<span class="nx">pg96</span><span class="p">.</span><span class="nx">cmd</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">},</span><span class="o">-</span><span class="nx">U</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="o">-</span><span class="nx">d</span><span class="p">{</span><span class="mi">2</span><span class="p">},</span><span class="o">-</span><span class="nx">f</span><span class="p">{</span><span class="mi">3</span><span class="p">},</span><span class="o">-</span><span class="nx">Eutf8</span><span class="p">,</span><span class="o">-</span><span class="nx">h127</span><span class="mf">.0.0.1</span><span class="p">,</span><span class="o">-</span><span class="nx">p5432</span>
-<span class="nx">pg96</span><span class="p">.</span><span class="nx">env</span><span class="o">=</span><span class="nx">PGPASSWORD</span><span class="o">:</span><span class="nx">root</span><span class="p">,</span>
-<span class="nx">mysql</span><span class="p">.</span><span class="nx">dir</span><span class="o">=</span><span class="nx">C</span><span class="o">:</span><span class="err">/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump</span>
-<span class="nx">mysql</span><span class="p">.</span><span class="nx">cmd</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">},</span><span class="o">-</span><span class="nx">u</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="o">-</span><span class="nx">p</span><span class="p">{</span><span class="mi">4</span><span class="p">},</span><span class="o">-</span><span class="nx">r</span><span class="p">{</span><span class="mi">3</span><span class="p">},</span><span class="o">--</span><span class="nx">set</span><span class="o">-</span><span class="nx">charset</span><span class="o">=</span><span class="nx">UTF8</span><span class="p">,{</span><span class="mi">2</span><span class="p">},</span><span class="o">-</span><span class="nx">h127</span><span class="mf">.0.0.1</span><span class="p">,</span>
+<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">dir</span><span class="o">=</span><span class="nx">Z</span><span class="o">:</span><span class="err">/backup/postgres</span>
+<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">dbname</span><span class="o">=</span><span class="nx">rexframe</span>
+<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">keep</span><span class="o">=</span><span class="mi">3</span>
+<span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">database</span><span class="o">=</span><span class="nx">pg96</span>
+<span class="nx">pg96</span><span class="p">.</span><span class="nx">cmd</span><span class="o">=</span><span class="nx">D</span><span class="o">:</span><span class="err">/PostgreSQL/10/bin/pg_dump,-Eutf8,-h127.0.0.1,-p5432,-U${sys.backup.db.username},-d${sys.backup.dbname},-f${sys.backup.dir}/{filename}</span>
+<span class="nx">pg96</span><span class="p">.</span><span class="nx">env</span><span class="o">=</span><span class="nx">PGPASSWORD</span><span class="o">:</span><span class="nx">$</span><span class="p">{</span><span class="nx">sys</span><span class="p">.</span><span class="nx">backup</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">password</span><span class="p">}</span>
+<span class="nx">mysql</span><span class="p">.</span><span class="nx">cmd</span><span class="o">=</span>
 <span class="nx">mysql</span><span class="p">.</span><span class="nx">env</span><span class="o">=</span>
-<span class="err">#</span><span class="nx">oracle</span><span class="p">.</span><span class="nx">dir</span><span class="o">=</span>
 <span class="err">#</span><span class="nx">oracle</span><span class="p">.</span><span class="nx">cmd</span><span class="o">=</span>
 <span class="err">#</span><span class="nx">oracle</span><span class="p">.</span><span class="nx">env</span><span class="o">=</span>
 </code></pre></div>
 
 <h4 id="二-备份接口">二、备份接口</h4>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">public</span> <span class="kr">static</span> <span class="kr">boolean</span> <span class="nx">backupDb</span><span class="p">()</span> <span class="p">{</span>
-<span class="cm">/*
-</span><span class="cm">* 从配置文件中解析所要参数
+<p><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/*备份数据库
 </span><span class="cm">*   dbname： 数据库名称
 </span><span class="cm">*   username: 进入数据库所需要的用户名
 </span><span class="cm">*   password: 进入数据库所需要的口令
@@ -248,108 +255,104 @@ https://im-Luxqi.github.io/js/common.js
 </span><span class="cm">*   backuppath： 备份文件路径
 </span><span class="cm">*   keepNumber： 配置数据库备份文件保留个数
 </span><span class="cm">* */</span>
-<span class="nb">String</span> <span class="nx">database</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.db.database&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">dbname</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.dbname&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">username</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.db.username&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">password</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.db.password&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">backupDir</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.dir&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">keepNumber</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.db.keep&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">cmd</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="nx">database</span><span class="o">+</span><span class="s2">&#34;.cmd&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">cmdDir</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="nx">database</span><span class="o">+</span><span class="s2">&#34;.dir&#34;</span><span class="p">);</span>
-<span class="c1">// env环境(prostgre数据库无法直接从命令行输入密码,这里通过配置环境属性“PGPASSWORD”来解决)
-</span><span class="c1"></span><span class="nx">Map</span><span class="o">&lt;</span><span class="nb">String</span><span class="p">,</span> <span class="nb">String</span><span class="o">&gt;</span> <span class="nx">envMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="nb">String</span> <span class="nx">envstring</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="nx">database</span><span class="o">+</span><span class="s2">&#34;.env&#34;</span><span class="p">);</span>
-<span class="nb">String</span><span class="p">[]</span> <span class="nx">split</span> <span class="o">=</span> <span class="nx">envstring</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">);</span>
-<span class="k">for</span><span class="p">(</span><span class="nb">String</span> <span class="nx">string</span> <span class="o">:</span> <span class="nx">split</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nb">String</span><span class="p">[]</span> <span class="nx">sp</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">);</span>
-	<span class="k">if</span><span class="p">(</span><span class="nx">sp</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
-		<span class="nx">envMap</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">sp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nx">sp</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="kr">public</span> <span class="k">void</span> <span class="nx">backupDb</span><span class="p">()</span> <span class="p">{</span>
+	<span class="cm">/*
+</span><span class="cm">	*从配置文件中解析所要参数*/</span>
+	<span class="nb">String</span> <span class="nx">database</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.db.database&#34;</span><span class="p">);</span>
+	<span class="nb">String</span> <span class="nx">dbname</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.dbname&#34;</span><span class="p">);</span>
+	<span class="nb">String</span> <span class="nx">backupDir</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.dir&#34;</span><span class="p">);</span>
+	<span class="nb">String</span> <span class="nx">keepNumber</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="s2">&#34;sys.backup.db.keep&#34;</span><span class="p">);</span>
+	<span class="nb">String</span> <span class="nx">cmd</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="nx">database</span><span class="o">+</span><span class="s2">&#34;.cmd&#34;</span><span class="p">);</span>
+	<span class="c1">// 准备env环境(prostgre数据库无法直接从命令行输入密码,这里通过配置环境属性“PGPASSWORD”来解决)
+</span><span class="c1"></span>	<span class="nx">Map</span><span class="o">&lt;</span><span class="nb">String</span><span class="p">,</span> <span class="nb">String</span><span class="o">&gt;</span> <span class="nx">envMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+	<span class="nb">String</span><span class="p">[]</span> <span class="nx">split</span> <span class="o">=</span> <span class="nx">AppConfig</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">(</span><span class="nx">database</span><span class="o">+</span><span class="s2">&#34;.env&#34;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">);</span>
+	<span class="k">for</span><span class="p">(</span><span class="nb">String</span> <span class="nx">string</span> <span class="o">:</span> <span class="nx">split</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">String</span><span class="p">[]</span> <span class="nx">sp</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;:&#34;</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">sp</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="nx">envMap</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">sp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nx">sp</span><span class="p">[</span><span class="mi">1</span><span class="p">]);}</span>
 	<span class="p">}</span>
-<span class="p">}</span>
-<span class="c1">// 备份存放地址
-</span><span class="c1"></span><span class="nb">Date</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-<span class="nx">SimpleDateFormat</span> <span class="nx">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimpleDateFormat</span><span class="p">(</span><span class="s2">&#34;yyyyMMddHHmmss&#34;</span><span class="p">);</span>
-<span class="nb">String</span> <span class="nx">filename</span> <span class="o">=</span><span class="nx">dbname</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>  <span class="o">+</span> <span class="nx">sdf</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span><span class="o">+</span>   <span class="s2">&#34;.tar&#34;</span><span class="p">;</span> <span class="c1">// 备份文件名称
-</span><span class="c1"></span>
-<span class="nx">File</span> <span class="nx">saveFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">backupDir</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">saveFile</span><span class="p">.</span><span class="nx">exists</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// 如果目录不存在
-</span><span class="c1"></span>	<span class="nx">saveFile</span><span class="p">.</span><span class="nx">mkdirs</span><span class="p">();</span>  <span class="c1">// 创建文件夹
-</span><span class="c1"></span><span class="p">}</span>
-<span class="nb">String</span> <span class="nx">backuppath</span> <span class="o">=</span> <span class="nx">backupDir</span> <span class="o">+</span><span class="s2">&#34;/&#34;</span><span class="o">+</span> <span class="nx">filename</span><span class="p">;</span>
+	<span class="c1">// 给备份文件命名
+</span><span class="c1"></span>	<span class="nb">Date</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+	<span class="nx">SimpleDateFormat</span> <span class="nx">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimpleDateFormat</span><span class="p">(</span><span class="s2">&#34;yyyyMMddHHmmss&#34;</span><span class="p">);</span>
+	<span class="nb">String</span> <span class="nx">filename</span> <span class="o">=</span><span class="nx">dbname</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span>  <span class="o">+</span> <span class="nx">sdf</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span><span class="o">+</span>   <span class="s2">&#34;.tar&#34;</span><span class="p">;</span> <span class="c1">// 备份文件名称
+</span><span class="c1"></span>	<span class="nx">File</span> <span class="nx">saveFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">backupDir</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">saveFile</span><span class="p">.</span><span class="nx">exists</span><span class="p">()){</span> <span class="c1">// 如果目录不存在创建文件夹
+</span><span class="c1"></span>		<span class="nx">saveFile</span><span class="p">.</span><span class="nx">mkdirs</span><span class="p">();</span>
+	<span class="p">}</span>
+	<span class="nx">cmd</span> <span class="o">=</span> <span class="nx">cmd</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&#34;{filename}&#34;</span><span class="p">,</span> <span class="nx">filename</span><span class="p">);</span>
 
 
-<span class="cm">/*备份数据库*/</span>
-<span class="kr">boolean</span> <span class="nx">flag</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span><span class="c1">// 备份是否成功
-</span><span class="c1"></span><span class="nx">Process</span> <span class="nx">p</span><span class="p">;</span>
-<span class="nx">ProcessBuilder</span> <span class="nx">pb</span><span class="p">;</span>
-<span class="nx">Runtime</span> <span class="nx">rt</span> <span class="o">=</span> <span class="nx">Runtime</span><span class="p">.</span><span class="nx">getRuntime</span><span class="p">();</span>
-<span class="nb">String</span> <span class="nx">cmdTemp</span> <span class="o">=</span> <span class="nx">MessageFormat</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">cmd</span><span class="p">,</span><span class="nx">cmdDir</span><span class="p">,</span><span class="nx">username</span><span class="p">,</span><span class="nx">dbname</span><span class="p">,</span><span class="nx">backuppath</span><span class="p">,</span><span class="nx">password</span><span class="p">);</span><span class="c1">// 命令模版
-</span><span class="c1"></span><span class="nx">List</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">Arrays</span><span class="p">.</span><span class="nx">asList</span><span class="p">(</span><span class="nx">cmdTemp</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">));</span>
-<span class="nx">pb</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ProcessBuilder</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
-<span class="k">try</span> <span class="p">{</span>
-	<span class="kr">final</span> <span class="nx">Map</span><span class="o">&lt;</span><span class="nb">String</span><span class="p">,</span> <span class="nb">String</span><span class="o">&gt;</span> <span class="nx">env</span> <span class="o">=</span> <span class="nx">pb</span><span class="p">.</span><span class="nx">environment</span><span class="p">();</span>
-	<span class="nx">env</span><span class="p">.</span><span class="nx">putAll</span><span class="p">(</span><span class="nx">envMap</span><span class="p">);</span> <span class="c1">// 环境设置
-</span><span class="c1"></span>	<span class="nx">p</span> <span class="o">=</span> <span class="nx">pb</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span> <span class="c1">// 备份操作
-</span><span class="c1"></span>	<span class="kr">final</span> <span class="nx">BufferedReader</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BufferedReader</span><span class="p">(</span>
-			<span class="k">new</span> <span class="nx">InputStreamReader</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">getErrorStream</span><span class="p">()));</span>
-	<span class="nb">String</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">readLine</span><span class="p">();</span>
-	<span class="k">while</span> <span class="p">(</span><span class="nx">line</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+	<span class="cm">/*
+</span><span class="cm">	*备份数据库*/</span>
+	<span class="nx">Process</span> <span class="nx">process</span><span class="p">;</span>
+	<span class="nx">ProcessBuilder</span> <span class="nx">pb</span><span class="p">;</span>
+	<span class="nx">Runtime</span> <span class="nx">rt</span> <span class="o">=</span> <span class="nx">Runtime</span><span class="p">.</span><span class="nx">getRuntime</span><span class="p">();</span>
+	<span class="c1">//调整为ProcessBuilder需要的命令格式
+</span><span class="c1"></span>	<span class="nx">List</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">Arrays</span><span class="p">.</span><span class="nx">asList</span><span class="p">(</span><span class="nx">cmd</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">));</span>
+	<span class="nx">pb</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ProcessBuilder</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+	<span class="k">try</span> <span class="p">{</span>
+		<span class="kr">final</span> <span class="nx">Map</span><span class="o">&lt;</span><span class="nb">String</span><span class="p">,</span> <span class="nb">String</span><span class="o">&gt;</span> <span class="nx">env</span> <span class="o">=</span> <span class="nx">pb</span><span class="p">.</span><span class="nx">environment</span><span class="p">();</span>
+		<span class="nx">env</span><span class="p">.</span><span class="nx">putAll</span><span class="p">(</span><span class="nx">envMap</span><span class="p">);</span> <span class="c1">// 环境设置
+</span><span class="c1"></span>		<span class="nx">process</span> <span class="o">=</span> <span class="nx">pb</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span> <span class="c1">// 备份操作
+</span><span class="c1"></span>		<span class="kr">final</span> <span class="nx">BufferedReader</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BufferedReader</span><span class="p">(</span>
+				<span class="k">new</span> <span class="nx">InputStreamReader</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">getErrorStream</span><span class="p">()));</span>
+		<span class="nb">String</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">readLine</span><span class="p">();</span>
+		<span class="k">while</span> <span class="p">(</span><span class="nx">line</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">line</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">readLine</span><span class="p">();</span>
+		<span class="p">}</span>
+		<span class="nx">r</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+		<span class="nx">process</span><span class="p">.</span><span class="nx">waitFor</span><span class="p">();</span>
+	<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">e</span><span class="p">.</span><span class="nx">printStackTrace</span><span class="p">();</span>
+	<span class="p">}</span>
 
-	<span class="p">{</span> <span class="nx">System</span><span class="p">.</span><span class="nx">err</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">readLine</span><span class="p">();</span> <span class="p">}</span>
-	<span class="nx">r</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-	<span class="nx">p</span><span class="p">.</span><span class="nx">waitFor</span><span class="p">();</span>
-	<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">exitValue</span><span class="p">());</span>
 
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">IOException</span> <span class="o">|</span> <span class="nx">InterruptedException</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">getMessage</span><span class="p">());</span>
-	<span class="nx">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="p">}</span>
+	<span class="cm">/*
+</span><span class="cm">	*控制备份文件保留个数 (文件数超过限制，保留最新的)*/</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">StringUtils</span><span class="p">.</span><span class="nx">isNotBlank</span><span class="p">(</span><span class="nx">keepNumber</span><span class="p">))</span> <span class="p">{</span>
+		<span class="nx">keepFileNumber</span><span class="p">(</span><span class="nx">backupDir</span><span class="p">,</span><span class="nx">dbname</span><span class="p">,</span><span class="nx">Integer</span><span class="p">.</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">keepNumber</span><span class="p">));</span>
+	<span class="p">}</span>
 
-<span class="cm">/*控制备份文件保留个数 (文件数超过限制，保留最新的)*/</span>
-<span class="k">if</span><span class="p">(</span><span class="nx">flag</span> <span class="o">&amp;&amp;</span> <span class="nx">StringUtils</span><span class="p">.</span><span class="nx">isNotBlank</span><span class="p">(</span><span class="nx">keepNumber</span><span class="p">))</span> <span class="p">{</span>
-	<span class="nx">keepFileNumber</span><span class="p">(</span><span class="nx">backupDir</span><span class="p">,</span><span class="nx">Integer</span><span class="p">.</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">keepNumber</span><span class="p">));</span>
-<span class="p">}</span>
-
-<span class="k">return</span> <span class="nx">flag</span><span class="p">;</span>
 <span class="p">}</span>
 
 
 
 <span class="cm">/**
-</span><span class="cm">* 根据最大备份数，保留备份文件
-</span><span class="cm">* @param strPath
-</span><span class="cm">* @param keepNum
-</span><span class="cm">*/</span>
-<span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">keepFileNumber</span><span class="p">(</span><span class="nb">String</span> <span class="nx">strPath</span><span class="p">,</span><span class="kr">int</span> <span class="nx">keepNum</span><span class="p">)</span> <span class="p">{</span>
-<span class="cm">/*寻找符合条件的文件*/</span>
-<span class="nx">List</span><span class="o">&lt;</span><span class="nx">File</span><span class="o">&gt;</span> <span class="nx">filelist</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">File</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="nx">File</span> <span class="nx">dir</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">strPath</span><span class="p">);</span>
-<span class="nx">File</span><span class="p">[]</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">dir</span><span class="p">.</span><span class="nx">listFiles</span><span class="p">();</span> <span class="c1">// 该文件目录下文件全部放入数组
-</span><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="nx">files</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-	<span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">files</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nb">String</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">files</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getName</span><span class="p">();</span>
-		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">files</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">isDirectory</span><span class="p">()</span> 
-			<span class="o">&amp;&amp;</span> <span class="nx">fileName</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s2">&#34;tar&#34;</span><span class="p">)</span> 
-			<span class="o">&amp;&amp;</span> <span class="nx">fileName</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&#34;rexframe&#34;</span><span class="p">))</span> <span class="p">{</span>
-			<span class="nx">filelist</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">files</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span><span class="cm"> * 根据最大备份数，保留备份文件
+</span><span class="cm"> * @param strPath
+</span><span class="cm"> * @param keepNum
+</span><span class="cm"> */</span>
+<span class="kr">public</span>  <span class="k">void</span> <span class="nx">keepFileNumber</span><span class="p">(</span><span class="nb">String</span> <span class="nx">strPath</span><span class="p">,</span><span class="kr">final</span> <span class="nb">String</span> <span class="nx">dbName</span><span class="p">,</span><span class="kr">int</span> <span class="nx">keepNum</span><span class="p">)</span> <span class="p">{</span>
+	<span class="cm">/*
+</span><span class="cm">	*在目录下寻找符合条件的文件*/</span>
+	<span class="nx">File</span> <span class="nx">dir</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">strPath</span><span class="p">);</span>
+	<span class="nx">File</span><span class="p">[]</span> <span class="nx">tempfilelist</span> <span class="o">=</span> <span class="nx">dir</span><span class="p">.</span><span class="nx">listFiles</span><span class="p">(</span><span class="k">new</span> <span class="nx">FilenameFilter</span><span class="p">()</span> <span class="p">{</span>
+		<span class="err">@</span><span class="nx">Override</span>
+		<span class="kr">public</span> <span class="kr">boolean</span> <span class="nx">accept</span><span class="p">(</span><span class="nx">File</span> <span class="nx">dir</span><span class="p">,</span> <span class="nb">String</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">dir</span><span class="p">,</span> <span class="nx">name</span><span class="p">).</span><span class="nx">isFile</span><span class="p">()</span> 
+					<span class="o">&amp;&amp;</span> <span class="nx">name</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="nx">dbName</span><span class="p">)</span> 
+					<span class="o">&amp;&amp;</span> <span class="nx">name</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s2">&#34;tar&#34;</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
+
+	<span class="cm">/*
+</span><span class="cm">	*排序(按日期倒序排列)*/</span>
+	<span class="nx">List</span><span class="o">&lt;</span><span class="nx">File</span><span class="o">&gt;</span> <span class="nx">filelist</span> <span class="o">=</span> <span class="nx">Arrays</span><span class="p">.</span><span class="nx">asList</span><span class="p">(</span><span class="nx">tempfilelist</span><span class="p">);</span>
+	<span class="nx">Collections</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">filelist</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Comparator</span><span class="o">&lt;</span><span class="nx">File</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+		<span class="err">@</span><span class="nx">Override</span>
+		<span class="kr">public</span> <span class="kr">int</span> <span class="nx">compare</span><span class="p">(</span><span class="nx">File</span> <span class="nx">o1</span><span class="p">,</span> <span class="nx">File</span> <span class="nx">o2</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nb">String</span> <span class="nx">o1lastModified</span> <span class="o">=</span> <span class="nx">o1</span><span class="p">.</span><span class="nx">lastModified</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+			<span class="nb">String</span> <span class="nx">o2lastModified</span> <span class="o">=</span> <span class="nx">o2</span><span class="p">.</span><span class="nx">lastModified</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+			<span class="k">return</span> <span class="nx">o2lastModified</span><span class="p">.</span><span class="nx">compareTo</span><span class="p">(</span><span class="nx">o1lastModified</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
+
+	<span class="cm">/*
+</span><span class="cm">	*只保留最大保留数*/</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">filelist</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">keepNum</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">filelist</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="k">delete</span><span class="p">();</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="cm">/*排序(按日期倒序排列)*/</span>
-<span class="nx">Collections</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">filelist</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Comparator</span><span class="o">&lt;</span><span class="nx">File</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
-	<span class="err">@</span><span class="nx">Override</span>
-	<span class="kr">public</span> <span class="kr">int</span> <span class="nx">compare</span><span class="p">(</span><span class="nx">File</span> <span class="nx">o1</span><span class="p">,</span> <span class="nx">File</span> <span class="nx">o2</span><span class="p">)</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="nx">o2</span><span class="p">.</span><span class="nx">getName</span><span class="p">().</span><span class="nx">compareTo</span><span class="p">(</span><span class="nx">o1</span><span class="p">.</span><span class="nx">getName</span><span class="p">());</span>
-	<span class="p">}</span>
-<span class="p">});</span>
-
-<span class="cm">/*只保留最大保留数*/</span>
-<span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">filelist</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-	<span class="k">if</span><span class="p">(</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">keepNum</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">filelist</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="k">delete</span><span class="p">();</span>
-	<span class="p">}</span>
-<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></p>
 
@@ -358,7 +361,7 @@ https://im-Luxqi.github.io/js/common.js
 <p><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
 </span><span class="cm"> * 恢复（数据库恢复一般不会在当前程序中直接一键恢复）
 </span><span class="cm"> * 调整相应的命令模板
-</span><span class="cm"> * 例如prostgre数据库： 
+</span><span class="cm"> * 例如prostgre数据库：  使用指令psql恢复
 </span><span class="cm"> */</span>
  
 <span class="nb">String</span> <span class="nx">cmd</span> <span class="o">=</span> <span class="nx">D</span><span class="o">:</span><span class="err">/PostgreSQL/10/bin;</span>
