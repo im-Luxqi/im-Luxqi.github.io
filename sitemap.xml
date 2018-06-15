@@ -23,7 +23,12 @@
   </url>
   
   <url>
-    <loc>https://im-Luxqi.github.io/study-planning/study-planning/</loc>
+    <loc>https://im-Luxqi.github.io/partner/20180615-partner/</loc>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://im-Luxqi.github.io/planning/20180615-planning/</loc>
     <lastmod>2018-05-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -49,14 +54,20 @@
   </url>
   
   <url>
-    <loc>https://im-Luxqi.github.io/post/</loc>
-    <lastmod>2018-06-14T00:00:00+00:00</lastmod>
+    <loc>https://im-Luxqi.github.io/partner/</loc>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://im-Luxqi.github.io/study-planning/</loc>
+    <loc>https://im-Luxqi.github.io/planning/</loc>
     <lastmod>2018-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://im-Luxqi.github.io/post/</loc>
+    <lastmod>2018-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
