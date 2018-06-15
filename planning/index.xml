@@ -14,10 +14,10 @@
     
     <item>
       <title>学习规划</title>
-      <link>https://im-Luxqi.github.io/planning/20180615-planning/</link>
+      <link>https://im-Luxqi.github.io/planning/planning/</link>
       <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
       <author>im_Luxqi@163.com (XingQi.wang)</author>
-      <guid>https://im-Luxqi.github.io/planning/20180615-planning/</guid>
+      <guid>https://im-Luxqi.github.io/planning/planning/</guid>
       <description> 一、阅读源码 学习经典源码中所用到的经典设计思想及常用设计模式。  tomcat源码参考
 二、分布式架构  三、微服务架构  四、并发编程  五、性能优化  六、开发工具  </description>
     </item>
