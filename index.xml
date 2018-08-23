@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>im_Luxqi@163.com (XingQi.wang)</managingEditor>
     <webMaster>im_Luxqi@163.com (XingQi.wang)</webMaster>
-    <lastBuildDate>Thu, 14 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://im-Luxqi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信公众号开发小记</title>
+      <link>https://im-Luxqi.github.io/post/20180815-weixin/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/20180815-weixin/</guid>
+      <description>&lt;p&gt;主要是一些配置，概念，方便快速入手&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular4公共项目模块管理</title>
@@ -60,7 +71,8 @@
       <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
       <author>im_Luxqi@163.com (XingQi.wang)</author>
       <guid>https://im-Luxqi.github.io/page/partner/</guid>
-      <description>一键到达 1.高泽文&amp;mdash;常州rextec信息技术有限公司&amp;mdash;20180615</description>
+      <description>一键到达 1.高泽文&amp;mdash;常州rextec信息技术有限公司&amp;mdash;20180615 
+2.李婉&amp;mdash;常州rextec信息技术有限公司&amp;mdash;20180823</description>
     </item>
     
     <item>
