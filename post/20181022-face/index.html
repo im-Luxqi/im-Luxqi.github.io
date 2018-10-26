@@ -15,26 +15,29 @@ https://im-Luxqi.github.io/js/common.js
 <script type="text/javascript" src="https://im-Luxqi.github.io/js/common.js"></script>
   
 
-  <title>同事</title>
-  <meta property="og:title" content="同事" />
-  <meta name="twitter:title" content="同事" />
-  <meta name="description" content="一键到达 1.高泽文&mdash;常州rextec信息技术有限公司&mdash;20180615 
-2.李婉&mdash;常州rextec信息技术有限公司&mdash;20180823">
-  <meta property="og:description" content="一键到达 1.高泽文&mdash;常州rextec信息技术有限公司&mdash;20180615 
-2.李婉&mdash;常州rextec信息技术有限公司&mdash;20180823">
-  <meta name="twitter:description" content="一键到达 1.高泽文&mdash;常州rextec信息技术有限公司&mdash;20180615 
-2.李婉&mdash;常州rextec信息技术有限公司&mdash;20180823">
+  <title>java面试（持续更新中。。。）</title>
+  <meta property="og:title" content="java面试（持续更新中。。。）" />
+  <meta name="twitter:title" content="java面试（持续更新中。。。）" />
+  <meta name="description" content="世道不仁，适者生存&hellip;
+
+">
+  <meta property="og:description" content="世道不仁，适者生存&hellip;
+
+">
+  <meta name="twitter:description" content="世道不仁，适者生存&hellip;
+
+">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://im-Luxqi.github.io/page/partner/" />
+  <meta property="og:url" content="https://im-Luxqi.github.io/post/20181022-face/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
   <meta name="generator" content="Hugo 0.49.1" />
-  <link rel="canonical" href="https://im-Luxqi.github.io/page/partner/" />
+  <link rel="canonical" href="https://im-Luxqi.github.io/post/20181022-face/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -183,9 +186,23 @@ https://im-Luxqi.github.io/js/common.js
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>同事</h1>
+            <div class="post-heading">
+              <h1>java面试（持续更新中。。。）</h1>
                 
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;发表于 2018-10-22
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 1 分钟 (19 个字)
+  
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -201,14 +218,34 @@ https://im-Luxqi.github.io/js/common.js
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 		
       <article role="main" class="blog-post">
+        <p>世道不仁，适者生存&hellip;</p>
+
+<p></p>
+
+<h4 id="1-基本数据类型-与自动拆装箱">1.基本数据类型，与自动拆装箱？</h4>
+<div class="highlight"><pre class="chroma">基本数据类型：boolean,char;byte,short,int,long,float,double;
+自动装箱： int-&gt;integer;(编译器，基本数据类型-&gt;对象)
+自动拆箱： integer-&gt;int;(对象-&gt;基本数据类型)</pre></div>
+<h4 id="2-线程与进程的区别">2.线程与进程的区别？</h4>
+<div class="highlight"><pre class="chroma">进程：应用程序执行时，系统就会创建一个进程，并分配资源（cpu，内存）；
+线程：进程中的一个执行路径，又称轻量级进程；
+
+区别：
+    a.地址空间--：进程间相互独立，同一进程的各线程共享；
+    b.通信------：线程间有全局变量；
+    c.调度和切换：线程上下文切换比进程上下文切换快的多；</pre></div>
+<h4 id="3-创建线程有几种不同的方式">3.创建线程有几种不同的方式？</h4>
+<div class="highlight"><pre class="chroma">a.继承Thread类，重写run方法；
+b.实现Runnable接口，重写run方法，但是比继承Thread类好用，实现接口还可以继承类，避免java单继承带来的局限性；
+c.实现callable接口，重写call方法，有返回值。
+d.使用实现了Executor接口的ThreadPoolExecutor来创建线程池。</pre></div>
+
         
-
-<h2 id="一键到达">一键到达</h2>
-
-<p><a href="https://my.csdn.net/github_38313789">1.高泽文&mdash;常州rextec信息技术有限公司&mdash;20180615 </a><br>
-<a href="https://blog.csdn.net/liwan09">2.李婉&mdash;常州rextec信息技术有限公司&mdash;20180823 </a></p>
-
-
+          <div class="blog-tags">
+            
+              <a href="https://im-Luxqi.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</a>&nbsp;
+            
+          </div>
         
 
         
@@ -216,6 +253,15 @@ https://im-Luxqi.github.io/js/common.js
 		<div id="container"></div>
       </article>
 
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://im-Luxqi.github.io/post/20181022-proxy/" data-toggle="tooltip" data-placement="top" title="动态代理">&larr; 前一篇</a>
+            </li>
+          
+          
+        </ul>
       
 
 

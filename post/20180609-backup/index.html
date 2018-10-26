@@ -23,14 +23,14 @@ https://im-Luxqi.github.io/js/common.js
   <meta name="twitter:description" content="">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://im-Luxqi.github.io/img/avatar-icon.png" />
-  <meta name="twitter:image" content="https://im-Luxqi.github.io/img/avatar-icon.png" />
+  <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
+  <meta name="twitter:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://im-Luxqi.github.io/post/20180609-backup/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
-  <meta name="generator" content="Hugo 0.40.2" />
+  <meta name="generator" content="Hugo 0.49.1" />
   <link rel="canonical" href="https://im-Luxqi.github.io/post/20180609-backup/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -151,7 +151,7 @@ https://im-Luxqi.github.io/js/common.js
       <div class="avatar-img-border">
         
           <a title="Day day up" href="https://im-Luxqi.github.io">
-            <img class="avatar-img" src="https://im-Luxqi.github.io/img/avatar-icon.png" alt="Day day up" />
+            <img class="avatar-img" src="https://im-Luxqi.github.io/img/my.jpg" alt="Day day up" />
           </a>
         
       </div>
@@ -251,7 +251,7 @@ https://im-Luxqi.github.io/js/common.js
 
 <h4 id="二-备份接口">二、备份接口</h4>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/*备份数据库
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/*备份数据库
 </span><span class="cm">*   dbname： 数据库名称
 </span><span class="cm">*   username: 进入数据库所需要的用户名
 </span><span class="cm">*   password: 进入数据库所需要的口令
@@ -360,11 +360,11 @@ https://im-Luxqi.github.io/js/common.js
 		<span class="p">}</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 
 <h4 id="三-恢复数据库">三、恢复数据库</h4>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
 </span><span class="cm"> * 恢复（数据库恢复一般不会在当前程序中直接一键恢复）
 </span><span class="cm"> * 调整相应的命令模板
 </span><span class="cm"> * 例如prostgre数据库：  使用指令psql恢复
@@ -372,7 +372,7 @@ https://im-Luxqi.github.io/js/common.js
  
 <span class="nb">String</span> <span class="nx">cmd</span> <span class="o">=</span> <span class="nx">D</span><span class="o">:</span><span class="err">/PostgreSQL/10/bin;</span>
 <span class="nb">String</span> <span class="nx">cmdTemp</span> <span class="o">=</span> <span class="nx">MessageFormat</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="s2">&#34;{0}/psql,-U{1},-d{2},-f{3}&#34;</span><span class="p">,</span><span class="nx">cmd</span><span class="p">,</span><span class="nx">username</span><span class="p">,</span><span class="nx">dbname</span><span class="p">,</span><span class="nx">backuppath</span><span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
 
         
           <div class="blog-tags">

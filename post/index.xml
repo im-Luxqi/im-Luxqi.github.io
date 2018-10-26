@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>im_Luxqi@163.com (XingQi.wang)</managingEditor>
     <webMaster>im_Luxqi@163.com (XingQi.wang)</webMaster>
-    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://im-Luxqi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>java面试（持续更新中。。。）</title>
+      <link>https://im-Luxqi.github.io/post/20181022-face/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/20181022-face/</guid>
+      <description>&lt;p&gt;世道不仁，适者生存&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>动态代理</title>
+      <link>https://im-Luxqi.github.io/post/20181022-proxy/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/20181022-proxy/</guid>
+      <description>&lt;p&gt;设计模式更多的是一种语意，而不是一种语法；&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>微信公众号开发小记</title>
