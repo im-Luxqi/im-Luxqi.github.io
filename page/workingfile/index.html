@@ -15,29 +15,20 @@ https://im-Luxqi.github.io/js/common.js
 <script type="text/javascript" src="https://im-Luxqi.github.io/js/common.js"></script>
   
 
-  <title>Angular4公共项目模块管理</title>
-  <meta property="og:title" content="Angular4公共项目模块管理" />
-  <meta name="twitter:title" content="Angular4公共项目模块管理" />
-  <meta name="description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用
-
-">
-  <meta property="og:description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用
-
-">
-  <meta name="twitter:description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用
-
-">
+  <title>Day day up</title>
+  <meta property="og:title" content="Day day up" />
+  <meta name="twitter:title" content="Day day up" />
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://im-Luxqi.github.io/post/20180614-public/" />
+  <meta property="og:url" content="https://im-Luxqi.github.io/page/workingfile/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
   <meta name="generator" content="Hugo 0.49.1" />
-  <link rel="canonical" href="https://im-Luxqi.github.io/post/20180614-public/" />
+  <link rel="canonical" href="https://im-Luxqi.github.io/page/workingfile/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -183,39 +174,7 @@ https://im-Luxqi.github.io/js/common.js
 
 
 
-  
-
-  <header class="header-section ">
-    
-    <div class="intro-header no-img">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
-              <h1>Angular4公共项目模块管理</h1>
-                
-                
-                  <span class="post-meta">
-  
-  
-  <i class="fa fa-calendar-o"></i>&nbsp;发表于 2018-06-14
-  
-  
-  &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 2 分钟 (329 个字)
-  
-  
-</span>
-
-
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="intro-header"></div>
 
 
     
@@ -224,178 +183,8 @@ https://im-Luxqi.github.io/js/common.js
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 		
       <article role="main" class="blog-post">
-        <p>从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用</p>
-
-<p></p>
-
-<h2 id="一-npm本地化仓库sinopia">一、npm本地化仓库Sinopia</h2>
-
-<h4 id="1-解决问题">1.解决问题</h4>
-
-<p>&emsp;&emsp;有时不同项目之间存在依赖，如果不想把项目发布到npm社区的仓库，则需要有自己本地的仓库。本地仓库候选方案有：sinopia，cnpm和kappa。</p>
-
-<h4 id="2-sinopia特点">2.sinopia特点</h4>
-
-<p>①零配置安装。<br />
-②使用文件系统作为存储，仅保存用户需要的包，如果本地仓库没有对应的包，则从指定的registry下载，默认为npmjs.org。</p>
-
-<h4 id="3-安装">3.安装</h4>
-
-<p>Sinopia的安装比较简单，只需使用npm一条安装命令即可</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">sinopia</span>
-</code></pre></div>
-<p><strong><em>在windows下直接执行这个命令会遇到一些问题：</em></strong><br />
-&emsp;&emsp;①python没有安装或版本不对,MSBuild版本不对<br />
-<code>gyp ERR! stack Error: Can't find Python executable &quot;python&quot;, you can set the PYTHON env variable.</code><br />
-<code>MSBUILD : error MSB4132: The tools version &quot;2.0&quot; is unrecognized. Available too ls versions are &quot;4.0&quot;</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//该类错误发生在node-gyp在构建时未能找到所需版本的构建工具
-</span><span class="c1">//解决方法如下：
-</span><span class="c1"></span><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">global</span> <span class="o">--</span><span class="nx">production</span> <span class="nx">windows</span><span class="o">-</span><span class="nx">build</span><span class="o">-</span><span class="nx">tools</span>
-<span class="nx">npm</span> <span class="nx">config</span> <span class="nx">set</span> <span class="nx">msvs_version</span> <span class="mi">2015</span> <span class="o">--</span><span class="nx">global</span>
-<span class="nx">npm</span> <span class="nx">config</span> <span class="nx">set</span> <span class="nx">python</span> <span class="nx">python2</span><span class="mf">.7</span> <span class="o">--</span><span class="nx">global</span>
-</code></pre></div>
-<p><strong><em>致命错误；</em></strong><br />
-&emsp;&emsp;在后期的操作中，发现sinopia有致命缺陷，下载某些字符时404，查阅后得知sinopia源码存在符号转换的bug。<br />
-&emsp;&emsp;并且sinopia作者已经在三年前停止对sinopia进行维护和升级,所以出来了一个sinopia的fork，名字叫做Verdaccio，
-然后由Verdaccio继续对sinopia进行更新和维护。</p>
-
-<h2 id="一-坑啊-使用verdaccio来构建私有npm服务器">一、坑啊，使用Verdaccio来构建私有npm服务器</h2>
-
-<p><a href="https://github.com/verdaccio/verdaccio">Verdaccio的github介绍</a></p>
-
-<h4 id="1-安装">1.安装</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">verdaccio</span>
-</code></pre></div>
-<h4 id="2-启动">2.启动</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Rextec</span><span class="o">&gt;</span><span class="nx">verdaccio</span>
- <span class="nx">warn</span> <span class="o">---</span> <span class="nx">config</span> <span class="nx">file</span>  <span class="o">-</span> <span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Rextec</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Roaming</span><span class="err">\</span><span class="nx">verdaccio</span><span class="err">\</span><span class="nx">config</span><span class="p">.</span><span class="nx">yaml</span>
- <span class="nx">warn</span> <span class="o">---</span> <span class="nx">Plugin</span> <span class="nx">successfully</span> <span class="nx">loaded</span><span class="o">:</span> <span class="nx">htpasswd</span>
- <span class="nx">warn</span> <span class="o">---</span> <span class="nx">Plugin</span> <span class="nx">successfully</span> <span class="nx">loaded</span><span class="o">:</span> <span class="nx">audit</span>
- <span class="nx">warn</span> <span class="o">---</span> <span class="nx">http</span> <span class="nx">address</span> <span class="o">-</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873/ - verdaccio/3.1.1
-</span><span class="c1"></span></code></pre></div>
-<p><strong><em>进入config配置一下</em></strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span> <span class="nx">国内url</span> <span class="nx">设置成淘宝镜像</span><span class="p">(</span><span class="nx">优先在本地仓库下载</span><span class="err">，</span><span class="nx">没有自动转到淘宝下载</span><span class="p">)</span>
-<span class="err">#</span> <span class="nx">a</span> <span class="nx">list</span> <span class="k">of</span> <span class="nx">other</span> <span class="nx">known</span> <span class="nx">repositories</span> <span class="nx">we</span> <span class="nx">can</span> <span class="nx">talk</span> <span class="nx">to</span>
-<span class="nx">uplinks</span><span class="o">:</span>
-  <span class="nx">npmjs</span><span class="o">:</span>
-    <span class="nx">url</span><span class="o">:</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//registry.npm.taobao.org/
-</span><span class="c1"></span></code></pre></div>
-<h4 id="3-使用准备">3.使用准备</h4>
-
-<p><strong><em>添加用户</em></strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$npm</span> <span class="nx">adduser</span> <span class="o">--</span><span class="nx">registry</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873/
-</span><span class="c1"></span><span class="nx">Username</span><span class="o">:</span> <span class="nx">wxq</span>
-<span class="nx">Password</span><span class="o">:</span> <span class="nx">wxq</span>
-<span class="nx">Email</span><span class="o">:</span> <span class="p">(</span><span class="k">this</span> <span class="nx">IS</span> <span class="kr">public</span><span class="p">)</span> <span class="nx">im_luxqi</span><span class="err">@</span><span class="mf">163.</span><span class="nx">com</span>
-</code></pre></div>
-<p><strong><em>使用用户登录</em></strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$npm</span> <span class="nx">login</span>
-<span class="nx">Username</span><span class="o">:</span> <span class="nx">wxq</span>
-<span class="nx">Password</span><span class="o">:</span> <span class="nx">wxq</span>
-<span class="nx">Email</span><span class="o">:</span> <span class="p">(</span><span class="k">this</span> <span class="nx">IS</span> <span class="kr">public</span><span class="p">)</span> <span class="nx">im_luxqi</span><span class="err">@</span><span class="mf">163.</span><span class="nx">com</span>
-<span class="nx">Logged</span> <span class="k">in</span> <span class="nx">as</span> <span class="nx">wxq</span> <span class="nx">on</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873/.
-</span><span class="c1"></span></code></pre></div>
-<h2 id="二-npm发布项目">二、npm发布项目</h2>
-
-<p>&emsp;&emsp;通过<code>npm install</code>命令可以从npm仓库下载依赖包,极大方面对依赖包管理,功能类似<code>maven</code>。同样,我们也可以
-通过<code>npm publish</code>命令将自己编写的代码提交到npm仓库供其他模块引用。</p>
-
-<h4 id="1-进入需要打包的项目安装ng-packagr依赖">1.进入需要打包的项目安装ng-packagr依赖</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">ng</span><span class="o">-</span><span class="nx">packagr</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
-</code></pre></div>
-<h4 id="2-在根目录下创建文件ng-package-json-public-api-ts并修改package-json">2.在根目录下创建文件ng-package.json,public-api.ts并修改package.json</h4>
-
-<h5 id="创建ng-package-json">创建ng-package.json</h5>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
-    <span class="s2">&#34;$schema&#34;</span><span class="o">:</span> <span class="s2">&#34;./node_modules/ng-packagr/ng-package.schema.json&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;whitelistedNonPeerDependencies&#34;</span><span class="o">:</span> <span class="p">[</span>
-        <span class="s2">&#34;.&#34;</span>
-    <span class="p">],</span>
-    <span class="s2">&#34;lib&#34;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&#34;entryFile&#34;</span><span class="o">:</span> <span class="s2">&#34;public-api.ts&#34;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h5 id="创建public-api-ts">创建public-api.ts</h5>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
-</span><span class="cm"> * 导出module模块
-</span><span class="cm"> */</span>
-<span class="k">export</span> <span class="o">*</span> <span class="nx">from</span> <span class="s1">&#39;./src/app/wxq-module/wxq-module.module&#39;</span>
-<span class="cm">/**
-</span><span class="cm"> * 导出普通类
-</span><span class="cm"> */</span>
-<span class="k">export</span> <span class="o">*</span> <span class="nx">from</span> <span class="s1">&#39;./src/app/class/user&#39;</span>
-<span class="cm">/**如果有其他需要导出的对象都可以写在public-api.ts里**/</span>
-</code></pre></div>
-<h5 id="修改package-json-增加打包命令package-并且修改private为false-调整version">修改package.json：增加打包命令package,并且修改private为false,调整version</h5>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
-  <span class="s2">&#34;name&#34;</span><span class="o">:</span> <span class="s2">&#34;yaya&#34;</span><span class="p">,</span>
-  <span class="s2">&#34;version&#34;</span><span class="o">:</span> <span class="s2">&#34;0.0.0&#34;</span><span class="p">,</span>
-  <span class="s2">&#34;license&#34;</span><span class="o">:</span> <span class="s2">&#34;MIT&#34;</span><span class="p">,</span>
-  <span class="s2">&#34;scripts&#34;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&#34;ng&#34;</span><span class="o">:</span> <span class="s2">&#34;ng&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;start&#34;</span><span class="o">:</span> <span class="s2">&#34;ng serve&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;build&#34;</span><span class="o">:</span> <span class="s2">&#34;ng build --prod&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;test&#34;</span><span class="o">:</span> <span class="s2">&#34;ng test&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;lint&#34;</span><span class="o">:</span> <span class="s2">&#34;ng lint&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;e2e&#34;</span><span class="o">:</span> <span class="s2">&#34;ng e2e&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;package&#34;</span><span class="o">:</span> <span class="s2">&#34;ng-packagr -p ng-package.json&#34;</span>
-  <span class="p">},</span>
-  <span class="s2">&#34;private&#34;</span><span class="o">:</span> <span class="kc">false</span>
-   <span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="3-在根目录下执行通过指令生成dist目录-该目录就是我们要发布到npm的内容">3.在根目录下执行通过指令生成dist目录，该目录就是我们要发布到npm的内容</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">run</span> <span class="kr">package</span>
-</code></pre></div>
-<h4 id="4-发布">4.发布</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">##</span> <span class="nx">设置成本地仓库</span>
-<span class="c1">// npm config set http://localhost:4873
-</span><span class="c1"></span> <span class="nx">nrm</span> <span class="nx">add</span> <span class="nx">wxqnpm</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873
-</span><span class="c1"></span> <span class="nx">nrm</span> <span class="nx">use</span> <span class="nx">wxqnpm</span>
-
-<span class="err">##</span> <span class="nx">登陆npm</span><span class="p">,(</span><span class="nx">没有先add</span><span class="p">)</span>
-<span class="nx">npm</span> <span class="nx">login</span>
-<span class="nx">Username</span><span class="o">:</span> <span class="nx">wxq</span>
-<span class="nx">Password</span><span class="o">:</span>
-<span class="nx">Email</span><span class="o">:</span> <span class="p">(</span><span class="k">this</span> <span class="nx">IS</span> <span class="kr">public</span><span class="p">)</span> <span class="nx">im_luxqi</span><span class="err">@</span><span class="mf">163.</span><span class="nx">com</span>
-<span class="nx">Logged</span> <span class="k">in</span> <span class="nx">as</span> <span class="nx">wxq</span> <span class="nx">on</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873
-</span><span class="c1"></span>
-<span class="err">#</span> <span class="nx">登陆完就可以publish</span>
-<span class="nx">cd</span> <span class="nx">dist</span>
-<span class="nx">npm</span> <span class="nx">publish</span>
-</code></pre></div>
-<h2 id="三-使用">三、使用</h2>
-
-<h4 id="1-install安装">1.install安装</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">yaya</span><span class="o">-</span><span class="nx">npm</span><span class="o">-</span><span class="nx">publish</span><span class="o">-</span><span class="nx">demo</span><span class="err">@</span><span class="mf">0.0.0</span> <span class="o">--</span><span class="nx">save</span>
-</code></pre></div>
-<h4 id="2-普通类可通过import命令导入">2.普通类可通过import命令导入</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span><span class="p">{</span><span class="nx">Data</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;yaya-npm-publish-demo&#39;</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="3-组件和正常组件使用方法一样">3.组件和正常组件使用方法一样</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">yaya</span><span class="o">-</span><span class="nx">component</span><span class="o">&gt;&lt;</span><span class="err">/app-yaya-component&gt;</span>
-</code></pre></div>
-<h2 id="四-好用的npm-registry管理工具nrm">四、好用的NPM registry管理工具nrm</h2>
-
-<p>nrm 可以方便的新增，查看，使用registry,使用安装都起来非常方便</p>
-
-<h4 id="1-安装-1">1.安装</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">nrm</span>
-</code></pre></div>
-<h4 id="2-常规炒作">2.常规炒作</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">nrm</span> <span class="nx">add</span> <span class="nx">wxqnpm</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873 # 添加本地的npm镜像地址
-</span><span class="c1"></span><span class="nx">$</span> <span class="nx">nrm</span> <span class="nx">use</span> <span class="nx">wxqnpm</span> <span class="err">#</span> <span class="nx">使用本址的镜像地址</span>
-<span class="nx">$</span> <span class="nx">nrm</span> <span class="o">--</span><span class="nx">help</span>  <span class="err">#</span> <span class="nx">查看nrm命令帮助</span>
-<span class="nx">$</span> <span class="nx">nrm</span> <span class="nx">ls</span> <span class="err">#</span> <span class="nx">列出可用的</span> <span class="nx">npm</span> <span class="nx">镜像地址</span>
-</code></pre></div>
-
         
-          <div class="blog-tags">
-            
-              <a href="https://im-Luxqi.github.io/tags/%E5%9F%BA%E7%A1%80%E6%9D%82%E8%AE%B0/">基础杂记</a>&nbsp;
-            
-          </div>
+
         
 
         
@@ -403,19 +192,6 @@ https://im-Luxqi.github.io/js/common.js
 		<div id="container"></div>
       </article>
 
-      
-        <ul class="pager blog-pager">
-          
-            <li class="previous">
-              <a href="https://im-Luxqi.github.io/post/20180609-backup/" data-toggle="tooltip" data-placement="top" title="数据库备份">&larr; 前一篇</a>
-            </li>
-          
-          
-            <li class="next">
-              <a href="https://im-Luxqi.github.io/post/20180815-weixin/" data-toggle="tooltip" data-placement="top" title="微信公众号开发小记">后一篇 &rarr;</a>
-            </li>
-          
-        </ul>
       
 
 

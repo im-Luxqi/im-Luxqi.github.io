@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>im_Luxqi@163.com (XingQi.wang)</managingEditor>
     <webMaster>im_Luxqi@163.com (XingQi.wang)</webMaster>
-    <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://im-Luxqi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Excel导入导出（POI）</title>
+      <link>https://im-Luxqi.github.io/post/20181102-brokencode/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/20181102-brokencode/</guid>
+      <description>&lt;p&gt;记录一些工作中零碎的代码&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>java面试（持续更新中。。。）</title>
@@ -71,9 +82,23 @@
       <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
       <author>im_Luxqi@163.com (XingQi.wang)</author>
       <guid>https://im-Luxqi.github.io/post/20180607-regular/</guid>
-      <description>&lt;p&gt;积累一下使用过的,常用的正则表达式，方便以后的使用&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;用途：&lt;/strong&gt; &lt;font color=green&gt;字符串匹配、查找、替换；&lt;/font&gt;&lt;br&gt;
+&lt;strong&gt;例如：&lt;/strong&gt;&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&lt;font color=green&gt;1.ip地址是否正确&lt;/font&gt;&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&lt;font color=green&gt;2.从网页中揪出email地址&lt;/font&gt;&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&lt;font color=green&gt;3.从网页中揪出链接&lt;/font&gt;&lt;br&gt;
+积累一下使用过的,常用的正则表达式，方便以后的使用&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://im-Luxqi.github.io/page/workingfile/</link>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/page/workingfile/</guid>
+      <description></description>
     </item>
     
     <item>

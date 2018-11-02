@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://im-Luxqi.github.io/post/20181102-brokencode/</loc>
+    <lastmod>2018-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://im-Luxqi.github.io/post/20181022-face/</loc>
     <lastmod>2018-10-22T00:00:00+00:00</lastmod>
   </url>
@@ -33,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://im-Luxqi.github.io/page/workingfile/</loc>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://im-Luxqi.github.io/post/20180510-bat/</loc>
     <lastmod>2018-05-10T00:00:00+00:00</lastmod>
   </url>
@@ -59,7 +69,7 @@
   
   <url>
     <loc>https://im-Luxqi.github.io/</loc>
-    <lastmod>2018-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -71,7 +81,7 @@
   
   <url>
     <loc>https://im-Luxqi.github.io/post/</loc>
-    <lastmod>2018-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -100,6 +110,12 @@
   
   <url>
     <loc>https://im-Luxqi.github.io/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://im-Luxqi.github.io/tags/%E7%A2%8E%E7%89%87%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2018-11-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
