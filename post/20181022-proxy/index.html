@@ -18,15 +18,9 @@ https://im-Luxqi.github.io/js/common.js
   <title>动态代理</title>
   <meta property="og:title" content="动态代理" />
   <meta name="twitter:title" content="动态代理" />
-  <meta name="description" content="设计模式更多的是一种语意，而不是一种语法；
-
-">
-  <meta property="og:description" content="设计模式更多的是一种语意，而不是一种语法；
-
-">
-  <meta name="twitter:description" content="设计模式更多的是一种语意，而不是一种语法；
-
-">
+  <meta name="description" content="设计模式更多的是一种语意，而不是一种语法；">
+  <meta property="og:description" content="设计模式更多的是一种语意，而不是一种语法；">
+  <meta name="twitter:description" content="设计模式更多的是一种语意，而不是一种语法；">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
@@ -36,7 +30,7 @@ https://im-Luxqi.github.io/js/common.js
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
-  <meta name="generator" content="Hugo 0.49.1" />
+  <meta name="generator" content="Hugo 0.58.2" />
   <link rel="canonical" href="https://im-Luxqi.github.io/post/20181022-proxy/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -203,7 +197,7 @@ https://im-Luxqi.github.io/js/common.js
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 4 分钟 (744 个字)
+  <i class="fa fa-clock-o"></i> 4 分钟 (737 个字)
   
   
 </span>
@@ -225,8 +219,6 @@ https://im-Luxqi.github.io/js/common.js
 		
       <article role="main" class="blog-post">
         <p>设计模式更多的是一种语意，而不是一种语法；</p>
-
-<p></p>
 
 <h4 id="一-了解代理">一、了解代理</h4>
 
@@ -329,7 +321,7 @@ https://im-Luxqi.github.io/js/common.js
 <span class="ln">45</span>        <span class="nx">m</span><span class="p">.</span><span class="nx">move</span><span class="p">();</span>
 <span class="ln">46</span>    <span class="p">}</span>
 <span class="ln">47</span><span class="p">}</span>
-<span class="ln">48</span></code></pre></div>
+</code></pre></div>
 
 
 <div class="box" >
@@ -451,28 +443,28 @@ after:<code>long end = System.currentTimeMillis();</code></p>
 <span class="ln">58</span>		<span class="k">return</span> <span class="nx">m</span><span class="p">;</span>
 <span class="ln">59</span>	<span class="p">}</span>
 <span class="ln">60</span><span class="p">}</span>
-<span class="ln">61</span></code></pre></div>
+</code></pre></div>
 <font color=green size=2>UserMgr</font>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln">1</span><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">UserMgr</span> <span class="p">{</span>
 <span class="ln">2</span>	<span class="k">void</span> <span class="nx">addUser</span><span class="p">();</span>
 <span class="ln">3</span><span class="p">}</span>
-<span class="ln">4</span></code></pre></div>
+</code></pre></div>
 <font color=green size=2>UserMgrImpl</font>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln"> 1</span><span class="kr">public</span> <span class="k">class</span> <span class="nx">UserMgrImpl</span> <span class="kr">implements</span> <span class="nx">UserMgr</span> <span class="p">{</span>
-<span class="ln"> 2</span>
-<span class="ln"> 3</span>	<span class="err">@</span><span class="nx">Override</span>
-<span class="ln"> 4</span>	<span class="kr">public</span> <span class="k">void</span> <span class="nx">addUser</span><span class="p">()</span> <span class="p">{</span>
-<span class="ln"> 5</span>		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;--------新增一条user数据&#34;</span><span class="p">);</span>
-<span class="ln"> 6</span>		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;--------打印日志&#34;</span><span class="p">);</span>
-<span class="ln"> 7</span>	<span class="p">}</span>
-<span class="ln"> 8</span>	
-<span class="ln"> 9</span><span class="p">}</span>
-<span class="ln">10</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln">1</span><span class="kr">public</span> <span class="k">class</span> <span class="nx">UserMgrImpl</span> <span class="kr">implements</span> <span class="nx">UserMgr</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span>	<span class="err">@</span><span class="nx">Override</span>
+<span class="ln">4</span>	<span class="kr">public</span> <span class="k">void</span> <span class="nx">addUser</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">5</span>		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;--------新增一条user数据&#34;</span><span class="p">);</span>
+<span class="ln">6</span>		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;--------打印日志&#34;</span><span class="p">);</span>
+<span class="ln">7</span>	<span class="p">}</span>
+<span class="ln">8</span>	
+<span class="ln">9</span><span class="p">}</span>
+</code></pre></div>
 <font color=green size=2>InvocationHandler</font>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln">1</span><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">InvocationHandler</span> <span class="p">{</span>
 <span class="ln">2</span>	<span class="kr">public</span> <span class="k">void</span> <span class="nx">invoke</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">o</span><span class="p">,</span> <span class="nx">Method</span> <span class="nx">m</span><span class="p">);</span>
 <span class="ln">3</span><span class="p">}</span>
-<span class="ln">4</span></code></pre></div>
+</code></pre></div>
 <font color=green size=2>TransactionHandler</font>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln"> 1</span><span class="kr">public</span> <span class="k">class</span> <span class="nx">TransactionHandler</span> <span class="kr">implements</span> <span class="nx">InvocationHandler</span> <span class="p">{</span>
 <span class="ln"> 2</span>	
@@ -498,7 +490,7 @@ after:<code>long end = System.currentTimeMillis();</code></p>
 <span class="ln">22</span>	<span class="p">}</span>
 <span class="ln">23</span>
 <span class="ln">24</span><span class="p">}</span>
-<span class="ln">25</span></code></pre></div>
+</code></pre></div>
 <font color=green size=2>ClientMain</font>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln"> 1</span><span class="kr">public</span> <span class="k">class</span> <span class="nx">ClientMain</span> <span class="p">{</span>
 <span class="ln"> 2</span>	<span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="kr">throws</span> <span class="nx">Exception</span> <span class="p">{</span>
@@ -511,7 +503,7 @@ after:<code>long end = System.currentTimeMillis();</code></p>
 <span class="ln"> 9</span>		<span class="nx">u</span><span class="p">.</span><span class="nx">addUser</span><span class="p">();</span>
 <span class="ln">10</span>	<span class="p">}</span>
 <span class="ln">11</span><span class="p">}</span>
-<span class="ln">12</span></code></pre></div></p>
+</code></pre></div></p>
 
         
           <div class="blog-tags">

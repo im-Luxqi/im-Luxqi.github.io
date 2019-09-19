@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java基础 on Day day up</title>
+    <link>https://im-Luxqi.github.io/tags/java%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in java基础 on Day day up</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>im_Luxqi@163.com (XingQi.wang)</managingEditor>
+    <webMaster>im_Luxqi@163.com (XingQi.wang)</webMaster>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://im-Luxqi.github.io/tags/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IO流</title>
+      <link>https://im-Luxqi.github.io/post/20181107-stream/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/20181107-stream/</guid>
+      <description>&lt;p&gt;之前一直朦朦胧胧，找个机会系统学习下&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>链表</title>
+      <link>https://im-Luxqi.github.io/post/20181107-linked/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      <author>im_Luxqi@163.com (XingQi.wang)</author>
+      <guid>https://im-Luxqi.github.io/post/20181107-linked/</guid>
+      <description>&lt;p&gt;突然发现自己不会链表,学习一下&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

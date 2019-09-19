@@ -15,21 +15,24 @@ https://im-Luxqi.github.io/js/common.js
 <script type="text/javascript" src="https://im-Luxqi.github.io/js/common.js"></script>
   
 
-  <title>Categories</title>
-  <meta property="og:title" content="Categories" />
-  <meta name="twitter:title" content="Categories" />
+  <title>链表</title>
+  <meta property="og:title" content="链表" />
+  <meta name="twitter:title" content="链表" />
+  <meta name="description" content="突然发现自己不会链表,学习一下&hellip;">
+  <meta property="og:description" content="突然发现自己不会链表,学习一下&hellip;">
+  <meta name="twitter:description" content="突然发现自己不会链表,学习一下&hellip;">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:image" content="https://im-Luxqi.github.io/img/my.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://im-Luxqi.github.io/categories/" />
+  <meta property="og:url" content="https://im-Luxqi.github.io/post/20181107-linked/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
   <meta name="generator" content="Hugo 0.58.2" />
-  <link rel="canonical" href="https://im-Luxqi.github.io/categories/" />
-  <link rel="alternate" href="https://im-Luxqi.github.io/categories/index.xml" type="application/rss+xml" title="Day day up">
+  <link rel="canonical" href="https://im-Luxqi.github.io/post/20181107-linked/" />
+  <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -183,9 +186,23 @@ https://im-Luxqi.github.io/js/common.js
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="categories-heading">
-              <h1>Categories</h1>
+            <div class="post-heading">
+              <h1>链表</h1>
                 
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;发表于 2018-11-07
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 1 分钟 (35 个字)
+  
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -196,18 +213,109 @@ https://im-Luxqi.github.io/js/common.js
 
 
     
-
-
-
 <div class="container" role="main">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-    <article class="post-preview">
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		
+      <article role="main" class="blog-post">
+        <p>突然发现自己不会链表,学习一下&hellip;</p>
+
+<p><a href="https://www.cnblogs.com/ysocean/p/7928988.html">======================linked list======================</a> <br>
+<strong><em>链表&nbsp;: &emsp;一串节点组成（node）;</em></strong><br>
+<strong><em>节点&nbsp;: &emsp;1个数据实例（data）,1个或者2个pointer指向地址（上一个,下一个）;</em></strong></p>
+
+<h4 id="1-单向链表-single-linked-list">1.单向链表（Single-Linked List）</h4>
+<div class="highlight"><pre class="chroma">组成： 两部分组成 
+      a.一部分存储data;
+      b.另一部分存储下一个节点的地址;（最后一个节点存储地址的部分为null）
+
+特点： 单向链表只可向一个方向遍历;
+        a.查找--&gt;需要从第一个节点开始每次访问下一个节点，一直访问到需要的位置
+        b.插入--&gt;在链表头插入
+        c.删除--&gt;将该节点的上一个节点的next指向该节点的下一个节点
+
+应用： 用单向链表实现栈</pre></div>
+<h4 id="2-双端链表">2.双端链表</h4>
+<div class="highlight"><pre class="chroma">    对于单项链表，想在尾部添加一个节点，必须从头部一直遍历到尾部;
+    在设计链表的时候多个对尾节点的引用，那么会简单很多。
+应用： 用双端链表实现队列</pre></div>
+<h4 id="3-有序链表">3.有序链表</h4>
+<div class="highlight"><pre class="chroma">    在有序链表中，数据是按照关键值有序排列的;
+    有序链表优于有序数组的地方是插入的速度（因为元素不需要移动）;
+    链表可以扩展到全部有效的使用内存，而数组只能局限于一个固定的大小中。
+应用： 用双端链表实现队列</pre></div>
+<h4 id="4-双向链表">4.双向链表</h4>
+<div class="highlight"><pre class="chroma">    单向链表只能从一个方向遍历，那么双向链表它可以从两个方向遍历
+应用： 实现双端队列</pre></div>
+
         
-      </div>
-    </article>
+          <div class="blog-tags">
+            
+              <a href="https://im-Luxqi.github.io/tags/java%E5%9F%BA%E7%A1%80/">java基础</a>&nbsp;
+            
+          </div>
+        
+
+        
+		
+		<div id="container"></div>
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://im-Luxqi.github.io/post/20181102-broken/" data-toggle="tooltip" data-placement="top" title="Excel导入导出（POI）">&larr; 前一篇</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://im-Luxqi.github.io/post/20181107-stream/" data-toggle="tooltip" data-placement="top" title="IO流">后一篇 &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
   </div>
 </div>
+
+
+
+
+<script>
+
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    
+    return container
+  },
+}
+
+
+
+var gitment = new Gitment({
+  
+  owner: 'im-Luxqi',
+  repo: 'issueGitcomment',
+  theme: myTheme,
+  oauth: {
+    client_id: 'ef956f416c29fa565b89',
+    client_secret: 'c66dc537e5706b89c2aa1b8232583f567b6380e3',
+  },
+})
+gitment.render('container')
+</script>
+
 
 
 
@@ -238,7 +346,7 @@ https://im-Luxqi.github.io/js/common.js
           
           <li>
             
-            <a href="https://im-Luxqi.github.io/categories/index.xml" title="RSS">
+            <a href="https://im-Luxqi.github.io/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>

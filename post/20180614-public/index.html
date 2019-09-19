@@ -18,15 +18,9 @@ https://im-Luxqi.github.io/js/common.js
   <title>Angular4公共项目模块管理</title>
   <meta property="og:title" content="Angular4公共项目模块管理" />
   <meta name="twitter:title" content="Angular4公共项目模块管理" />
-  <meta name="description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用
-
-">
-  <meta property="og:description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用
-
-">
-  <meta name="twitter:description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用
-
-">
+  <meta name="description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用">
+  <meta property="og:description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用">
+  <meta name="twitter:description" content="从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
@@ -36,7 +30,7 @@ https://im-Luxqi.github.io/js/common.js
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
-  <meta name="generator" content="Hugo 0.49.1" />
+  <meta name="generator" content="Hugo 0.58.2" />
   <link rel="canonical" href="https://im-Luxqi.github.io/post/20180614-public/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -226,8 +220,6 @@ https://im-Luxqi.github.io/js/common.js
       <article role="main" class="blog-post">
         <p>从npm 本地仓库的创建====》angular4项目的打包====》其他angular4项目的下载调用</p>
 
-<p></p>
-
 <h2 id="一-npm本地化仓库sinopia">一、npm本地化仓库Sinopia</h2>
 
 <h4 id="1-解决问题">1.解决问题</h4>
@@ -272,14 +264,14 @@ https://im-Luxqi.github.io/js/common.js
  <span class="nx">warn</span> <span class="o">---</span> <span class="nx">Plugin</span> <span class="nx">successfully</span> <span class="nx">loaded</span><span class="o">:</span> <span class="nx">htpasswd</span>
  <span class="nx">warn</span> <span class="o">---</span> <span class="nx">Plugin</span> <span class="nx">successfully</span> <span class="nx">loaded</span><span class="o">:</span> <span class="nx">audit</span>
  <span class="nx">warn</span> <span class="o">---</span> <span class="nx">http</span> <span class="nx">address</span> <span class="o">-</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873/ - verdaccio/3.1.1
-</span><span class="c1"></span></code></pre></div>
+</span></code></pre></div>
 <p><strong><em>进入config配置一下</em></strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span> <span class="nx">国内url</span> <span class="nx">设置成淘宝镜像</span><span class="p">(</span><span class="nx">优先在本地仓库下载</span><span class="err">，</span><span class="nx">没有自动转到淘宝下载</span><span class="p">)</span>
 <span class="err">#</span> <span class="nx">a</span> <span class="nx">list</span> <span class="k">of</span> <span class="nx">other</span> <span class="nx">known</span> <span class="nx">repositories</span> <span class="nx">we</span> <span class="nx">can</span> <span class="nx">talk</span> <span class="nx">to</span>
 <span class="nx">uplinks</span><span class="o">:</span>
   <span class="nx">npmjs</span><span class="o">:</span>
     <span class="nx">url</span><span class="o">:</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//registry.npm.taobao.org/
-</span><span class="c1"></span></code></pre></div>
+</span></code></pre></div>
 <h4 id="3-使用准备">3.使用准备</h4>
 
 <p><strong><em>添加用户</em></strong></p>
@@ -294,7 +286,7 @@ https://im-Luxqi.github.io/js/common.js
 <span class="nx">Password</span><span class="o">:</span> <span class="nx">wxq</span>
 <span class="nx">Email</span><span class="o">:</span> <span class="p">(</span><span class="k">this</span> <span class="nx">IS</span> <span class="kr">public</span><span class="p">)</span> <span class="nx">im_luxqi</span><span class="err">@</span><span class="mf">163.</span><span class="nx">com</span>
 <span class="nx">Logged</span> <span class="k">in</span> <span class="nx">as</span> <span class="nx">wxq</span> <span class="nx">on</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//localhost:4873/.
-</span><span class="c1"></span></code></pre></div>
+</span></code></pre></div>
 <h2 id="二-npm发布项目">二、npm发布项目</h2>
 
 <p>&emsp;&emsp;通过<code>npm install</code>命令可以从npm仓库下载依赖包,极大方面对依赖包管理,功能类似<code>maven</code>。同样,我们也可以

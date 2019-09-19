@@ -23,25 +23,19 @@ https://im-Luxqi.github.io/js/common.js
 &emsp;&emsp;&emsp;1.ip地址是否正确
 &emsp;&emsp;&emsp;2.从网页中揪出email地址
 &emsp;&emsp;&emsp;3.从网页中揪出链接
-积累一下使用过的,常用的正则表达式，方便以后的使用
-
-">
+积累一下使用过的,常用的正则表达式，方便以后的使用">
   <meta property="og:description" content="用途： 字符串匹配、查找、替换；
 例如：
 &emsp;&emsp;&emsp;1.ip地址是否正确
 &emsp;&emsp;&emsp;2.从网页中揪出email地址
 &emsp;&emsp;&emsp;3.从网页中揪出链接
-积累一下使用过的,常用的正则表达式，方便以后的使用
-
-">
+积累一下使用过的,常用的正则表达式，方便以后的使用">
   <meta name="twitter:description" content="用途： 字符串匹配、查找、替换；
 例如：
 &emsp;&emsp;&emsp;1.ip地址是否正确
 &emsp;&emsp;&emsp;2.从网页中揪出email地址
 &emsp;&emsp;&emsp;3.从网页中揪出链接
-积累一下使用过的,常用的正则表达式，方便以后的使用
-
-">
+积累一下使用过的,常用的正则表达式，方便以后的使用">
   <meta name="author" content="XingQi.wang"/>
   <link href='https://im-Luxqi.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://im-Luxqi.github.io/img/my.jpg" />
@@ -51,7 +45,7 @@ https://im-Luxqi.github.io/js/common.js
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day day up" />
 
-  <meta name="generator" content="Hugo 0.49.1" />
+  <meta name="generator" content="Hugo 0.58.2" />
   <link rel="canonical" href="https://im-Luxqi.github.io/post/20180607-regular/" />
   <link rel="alternate" href="https://im-Luxqi.github.io/index.xml" type="application/rss+xml" title="Day day up">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -218,7 +212,7 @@ https://im-Luxqi.github.io/js/common.js
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 1 分钟 (39 个字)
+  <i class="fa fa-clock-o"></i> 1 分钟 (126 个字)
   
   
 </span>
@@ -246,9 +240,43 @@ https://im-Luxqi.github.io/js/common.js
 &emsp;&emsp;&emsp;<font color=green>3.从网页中揪出链接</font><br>
 积累一下使用过的,常用的正则表达式，方便以后的使用</p>
 
-<p></p>
+<p><a href="http://tools.jb51.net/regex/javascript">======================正则在线======================</a></p>
 
-<h4 id="1-只能输入数字-小数点后只能保留两位">1.只能输入数字，小数点后只能保留两位</h4>
+<h3 id="一-各符号含义">一、各符号含义</h3>
+
+<p><font color="blue">1.初步认识</font><br></p>
+<div class="highlight"><pre class="chroma">    .              |代表1个字符
+    *              |代表0个或多个字符
+    +              |代表1个或多个字符
+    ？             |代表0个或1个字符
+
+    ^              |取反
+    |              |取并集
+    &amp;&amp;             |取交集</pre></div>
+<p><font color="blue">2.范围</font><br></p>
+<div class="highlight"><pre class="chroma">    A{a}          |代表A 出现a次
+    A{a,}         |代表A 至少出现a次
+    A{a,b}        |代表A 至少出现a次 至多出现b次
+
+    [abc]         |代表 取abc中的1个
+    [^abc]        |代表 取除了abc的1个
+    [a-zA-Z]      |代表 取a-z的1个或A-Z的1个（即：一个大写字母或者小写字母）
+    [a-z]|[A-Z]   |代表 取a-z的1个或A-Z的1个（即：一个大写字母或者小写字母）
+    [a-z[A-Z]]    |代表 取a-z的1个或A-Z的1个（即：一个大写字母或者小写字母）
+    [a-z&amp;&amp;[rpg]]  |代表 取a-z的1个并且属于rpg中的一个</pre></div>
+<p><font color="blue">3.其他</font><br></p>
+<div class="highlight"><pre class="chroma">    \d            |代表 一个数字 [0-9]
+    \D            |代表 一个非数字字符 [^0-9]
+    \s            |代表 一个空白字符 [\t\n\xOB\f\r]【空格 或 换行 或 换页 或 回车】
+    \S            |代表 一个非空白字符 [^\s]
+    \w            |代表 一个word字符 [a-ZA-Z_0-9]【字母 或 下划线 或 数字】
+    \w            |代表 一个非word字符 [^\w]</pre></div>
+<p><font color="blue">3.边界</font><br></p>
+<div class="highlight"><pre class="chroma">    ^             |小尖号开头代表一行的开始
+    $             |小尖号开头代表一行的结束</pre></div>
+<h3 id="二-常用正则">二、常用正则</h3>
+
+<p><strong>1.只能输入数字，小数点后只能保留两位</strong></p>
 
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span> <span class="nx">onkeyup</span><span class="o">=</span><span class="s2">&#34;clearNoNum(this)&#34;</span><span class="o">&gt;</span>
 
